@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="從 iloader、LocalDevVPN 到 RingoFly：iPhone 安裝、配對、首次定位、收藏與路線使用，以及選用 SideStore 手機續期。">
+  <meta name="theme-color" content="#152b4e">
+  <title>RingoFly｜安裝與使用指南</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23152b4e'/%3E%3Ctext x='16' y='24' text-anchor='middle' font-family='sans-serif' font-weight='700' font-size='25' fill='white'%3ER%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="guide.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#prepare">跳到安裝步驟</a>
+  <header class="topbar">
+    <a class="brand" href="#top"><img src="app-icon.png" alt="" width="36" height="36"><strong>RingoFly</strong><span>安裝與使用指南</span></a>
+    <a class="header-link" href="#help">遇到問題</a>
+  </header>
+  <div class="layout" id="top">
+    <aside class="sidebar">
+      <p class="nav-label">照順序開始</p>
+      <nav aria-label="指南目錄">
+        <a href="#prepare"><span>00</span>準備清單</a>
+        <a href="#iloader"><span>01</span>安裝 iloader</a>
+        <a href="#vpn"><span>02</span>安裝 LocalDevVPN</a>
+        <a href="#install"><span>03</span>安裝 RingoFly</a>
+        <a href="#pair"><span>04</span>匯入配對檔</a>
+        <a href="#connect"><span>05</span>第一次連線</a>
+        <a href="#use"><span>06</span>開始使用</a>
+        <a href="#backup"><span>07</span>同步與換手機</a>
+        <a href="#renew"><span>08</span>續期與更新</a>
+        <a href="#help"><span>?</span>常見問題</a>
+      </nav>
+      <div class="sidebar-note"><strong>第一次需要電腦</strong><p>安裝完成後，日常定位可在手機操作。</p></div>
+    </aside>
+    <main>
+      <div class="intro">
+        <p class="eyebrow">IPHONE · 快速上手</p>
+        <h1>把 RingoFly 裝好，<br>開始使用。</h1>
+        <p class="lead">先裝工具，再安裝 App。照下方步驟完成配對與連線，就能使用收藏、金盆、路線及搖桿。</p>
+        <div class="intro-actions"><a class="button primary" href="#iloader">從第 1 步開始</a><a class="button secondary" href="#use">已安裝，直接看使用方式</a></div>
+        <div class="flow" aria-label="安裝順序"><span>iloader</span><b aria-hidden="true">／</b><span>LocalDevVPN</span><b aria-hidden="true">／</b><span>RingoFly</span><b aria-hidden="true">／</b><span>配對與連線</span></div>
+      </div>
+
+      <section id="prepare" class="section">
+        <div class="section-heading"><span class="step">00</span><div><p class="kicker">開始之前</p><h2>準備這幾樣就好</h2></div></div>
+        <ul class="requirements">
+          <li><strong>iPhone</strong><span>iOS 17.4 以上，已設定解鎖密碼。新系統的實際連線支援以 App 狀態為準。</span></li>
+          <li><strong>電腦與 USB 線</strong><span>Mac 或 Windows，使用可傳輸資料的線材。</span></li>
+          <li><strong>Apple 帳號</strong><span>用於簽署與安裝；準備密碼及雙重認證驗證碼。</span></li>
+          <li><strong>可用的 Wi-Fi</strong><span>第一次連線需下載開發者映像；建議先用 Wi-Fi 完成。</span></li>
+        </ul>
+        <div class="note"><strong>Google 帳號是選用的。</strong>用來備份個人收藏與已拉紀錄；安裝 App 使用的是 Apple 帳號。</div>
+      </section>
+
+      <section id="iloader" class="section">
+        <div class="section-heading"><span class="step">01</span><div><p class="kicker">在電腦操作</p><h2>下載並安裝 iloader</h2></div></div>
+        <p>iloader 會用你的 Apple 帳號，將 IPA 簽署後裝進 iPhone。</p>
+        <div class="platforms">
+          <article class="platform-card"><h3>Mac</h3><ol><li>下載官方 DMG 安裝檔。</li><li>開啟 DMG，將 iloader 拖進「應用程式」。</li><li>從「應用程式」開啟 iloader。</li></ol><a class="button secondary" href="https://github.com/nab138/iloader/releases/latest/download/iloader-darwin-universal.dmg">下載 Mac 版</a></article>
+          <article class="platform-card"><h3>Windows</h3><ol><li>先安裝 iTunes，讓電腦能辨識 iPhone。</li><li>下載並執行官方 MSI 安裝檔。</li><li>完成安裝後開啟 iloader。</li></ol><div class="link-row"><a href="https://apple.co/ms">下載 iTunes</a><a class="button secondary" href="https://github.com/nab138/iloader/releases/latest/download/iloader-windows-x64.msi">下載 Windows 版</a></div></article>
+        </div>
+        <p class="source">下載來源：<a href="https://iloader.app/">iloader 官方網站</a>。Windows 10 ARM 與 32 位元系統不適用；其他平台見<a href="https://docs.sidestore.io/docs/installation/prerequisites">官方準備說明</a>。</p>
+        <details><summary>Mac 說無法開啟 iloader？</summary><div class="detail-body"><p>確認是上方官方下載的檔案後，到「系統設定 → 隱私權與安全性」，找到被阻擋的 App，依畫面選「強制打開／仍要打開」。如果沒有這個選項，請查看 <a href="https://support.apple.com/zh-tw/102445">Apple 開啟 App 說明</a>。</p></div></details>
+        <div class="checkpoint"><span aria-hidden="true">✓</span>完成時：電腦能開啟 iloader。</div>
+      </section>
+
+      <section id="vpn" class="section">
+        <div class="section-heading"><span class="step">02</span><div><p class="kicker">在 iPhone 操作</p><h2>安裝 LocalDevVPN</h2></div></div>
+        <ol class="instructions"><li>點下方連結，到 App Store 安裝 <strong>LocalDevVPN</strong>。</li><li>開啟 App，按 <strong>Connect／連線</strong>。</li><li>出現「允許加入 VPN 設定」時，按<strong>允許</strong>，輸入 iPhone 解鎖密碼。</li><li>等待顯示已連線；初次設定時保持 Wi-Fi 開啟。</li></ol>
+        <a class="button primary" href="https://apps.apple.com/app/localdevvpn/id6755608044">在 App Store 安裝 LocalDevVPN</a>
+        <p class="source">LocalDevVPN 用於連接手機內的裝置服務。<a href="https://docs.sidestore.io/docs/installation/prerequisites">官方工具準備說明</a></p>
+        <div class="checkpoint"><span aria-hidden="true">✓</span>完成時：LocalDevVPN 顯示已連線。</div>
+      </section>
+
+      <section id="install" class="section">
+        <div class="section-heading"><span class="step">03</span><div><p class="kicker">電腦安裝 · 手機確認</p><h2>把 RingoFly 裝進手機</h2></div></div>
+        <ol class="instructions"><li>用 USB 連接 iPhone 與電腦，解鎖手機。出現「信任這部電腦」時按<strong>信任</strong>，並輸入解鎖密碼。</li><li>在電腦開啟 iloader，登入自己的 <strong>Apple 帳號</strong>，依提示輸入驗證碼。</li><li>在裝置清單選擇<strong>這支 iPhone</strong>。</li><li>點下方「前往 GitHub 最新版本」，用受邀的 GitHub 帳號登入。在版本頁的 <strong>Assets／資產</strong> 找到 <strong>.ipa</strong> 安裝檔並下載；回到 iloader 按 <strong>Import IPA／匯入 IPA</strong>，選擇檔案並等待安裝完成。</li><li>在 iPhone 前往<strong>設定 → 一般 → VPN 與裝置管理</strong>，點自己的開發者帳號，依畫面完成「信任」或「允許並重新啟動」。</li><li>前往<strong>設定 → 隱私權與安全性 → 開發者模式</strong>，開啟後依提示重新啟動，解鎖並確認啟用。</li><li>回到主畫面，開啟 <strong>RingoFly</strong>。</li></ol>
+        <div class="download-box"><div><strong>RingoFly 最新版本</strong><span>GitHub Releases · IPA 未簽署</span></div><a class="button primary" href="https://github.com/dearguo/pikmin-fly/releases/latest">前往 GitHub 最新版本</a></div><p class="small">私人專案：請先接受維護者的 GitHub 邀請，再用受邀帳號登入。下載 Assets 內的 .ipa；「Source code」是原始碼，不是手機安裝檔。</p>
+        <div class="note"><strong>IPA 需要用 iloader 安裝。</strong>直接點檔案不會安裝。已經裝過 RingoFly 的使用者，請用原 Apple 帳號覆蓋安裝，保留相同 App 識別，不要先刪除。</div>
+        <p class="source"><a href="https://github.com/nab138/iloader">iloader 官方安裝工具</a> · <a href="https://docs.sidestore.io/docs/installation/install">手機信任與開發者模式操作參考</a></p>
+        <details><summary>想以後直接在手機續期？可選装 SideStore</summary><div class="detail-body"><p>SideStore 不是必要工具。它讓你用手機重新簽署 RingoFly；免費 Apple 帳號仍是七天有效期。完整安裝方式在下方<a href="#sidestore">「SideStore 手機續期」</a>。</p></div></details>
+        <div class="checkpoint"><span aria-hidden="true">✓</span>完成時：主畫面有 RingoFly，且能開啟。</div>
+      </section>
+
+      <section id="pair" class="section">
+        <div class="section-heading"><span class="step">04</span><div><p class="kicker">只需要這支手機的配對檔</p><h2>匯出配對檔，再匯入 RingoFly</h2></div></div>
+        <ol class="instructions"><li>iPhone 保持 USB 連接、解鎖。在 iloader 選擇這支手機。</li><li>按 <strong>Manage Pairing File／管理配對檔</strong>。</li><li>選 <strong>Export／匯出</strong>（部分版本顯示「Export (Not Recommended)」），確認匯出，將檔案存成 <code>pairingFile.plist</code>。</li><li>Mac 可用 AirDrop 傳給<strong>自己的 iPhone</strong>；Windows 可存入自己的私人 iCloud Drive。收到後存到手機的<strong>「檔案」App</strong>。</li><li>開啟 RingoFly，按<strong>匯入配對檔案</strong>，選取剛剛存好的檔案。若已進入地圖，可到設定內更換配對檔。</li></ol>
+        <div class="note"><strong>為什麼用匯出？</strong>iloader 的自動放置清單目前未包含 RingoFly，所以採用手動匯入。配對檔屬於這支手機，不能用別人的檔案；請勿放在群組或共享資料夾。</div>
+        <p class="source">按鈕及匯出方式：<a href="https://github.com/nab138/iloader/blob/main/src/locales/en.json">iloader 官方介面</a>與<a href="https://github.com/nab138/iloader/blob/main/src-tauri/src/pairing.rs">配對檔實作</a>。</p>
+        <div class="checkpoint"><span aria-hidden="true">✓</span>完成時：RingoFly 顯示「配對檔案已匯入」。</div>
+      </section>
+
+      <section id="connect" class="section">
+        <div class="section-heading"><span class="step">05</span><div><p class="kicker">在 iPhone 操作</p><h2>完成第一次連線</h2></div></div>
+        <ol class="instructions"><li>iPhone 連上可用 Wi-Fi；開啟 LocalDevVPN，確認已連線。</li><li>回到 RingoFly，按<strong>Wi-Fi 快速啟動</strong>。若已自動連線，就等待準備完成。</li><li>首次下載開發者映像 <strong>DDI</strong> 時保持網路暢通；下載及掛載完成前不要反覆按重試。</li><li>看到下方三項完成，即可進入地圖。</li><li>若系統詢問定位權限，先允許「使用 App 期間」。需要背景維持時，再依 App 提示調整權限。</li></ol>
+        <div class="ready-checks"><span>✓ 配對檔案已匯入</span><span>✓ 裝置通道已連接</span><span>✓ 開發者映像 DDI 已掛載</span></div>
+        <details><summary>沒有 Wi-Fi，想用行動網路啟動？</summary><div class="detail-body"><p>先完成首次 DDI 下載，再用 App 的<strong>「4G 離線啟動」</strong>引導：</p><ol><li>關閉 Wi-Fi，保持行動網路開啟。</li><li>到 LocalDevVPN，等待已連線。</li><li>留在 LocalDevVPN 畫面，開啟飛航模式。</li><li>手動回到 RingoFly，等待三項準備完成。</li><li>先保持飛航模式，選點並啟動定位或路線。</li><li>出現綠色「定位已建立」後，才關閉飛航模式。</li></ol></div></details>
+        <div class="checkpoint"><span aria-hidden="true">✓</span>完成時：三項就緒，地圖可操作。</div>
+      </section>
+
+      <section id="use" class="section">
+        <div class="section-heading"><span class="step">06</span><div><p class="kicker">先完成一次定位與恢復</p><h2>開始使用 RingoFly</h2></div></div>
+        <div class="first-use"><h3>第一次試用</h3><ol class="instructions"><li>在地圖搜尋地名，或輸入座標，例如 <code>25.0330, 121.5654</code>。</li><li>選好位置，按首頁的<strong>開始模擬定位</strong>。</li><li>看到定位建立成功後，到 Apple 地圖或需要定位的 App 重新整理，確認位置。</li><li>要回到真實位置，按首頁右側設定齒輪下方的<strong>返回箭頭 ↶</strong>，等待恢復定位。</li></ol><p class="small">拖動地圖只是選點。暫停路線或退出搖桿會停在模擬位置；回到真實位置請用返回箭頭。</p></div>
+        <div class="feature-grid">
+          <article class="feature"><span class="feature-label">收藏</span><h3>保存常用座標</h3><p>下方「收藏」→ ＋ → 填名稱、座標與分類 → 儲存。經緯度可一起貼上。</p><p>點清單地點回地圖，再按開始模擬定位。<strong>向左滑動</strong>可編輯、刪除。</p></article>
+          <article class="feature"><span class="feature-label">金盆</span><h3>前往活動地點</h3><p>下方「金盆」→ 選盆栽或明信片 → 點名稱或座標前往。</p><p>拉取後勾選右側方框，留下<strong>自己的拉取時間</strong>。可重複拉的地點到期回到未拉，上次時間仍保留。</p></article>
+          <article class="feature"><span class="feature-label">路線</span><h3>儲存一次，反覆使用</h3><p>下方「路線」→ ＋ → 選沿道路或自行設定多點 → 儲存。</p><p>清單按「開始」，在預覽選<strong>速度與圈數</strong>，再開始移動。常用路線可從 ⋯ 置頂。</p></article>
+          <article class="feature"><span class="feature-label">搖桿</span><h3>小幅調整位置</h3><p>下方「搖桿」→ 等待定位準備 → 調整速度 → 拖曳圓形控制器。</p><p>上北、下南、左西、右東。<strong>放開停住</strong>；退出仍保持目前位置。</p></article>
+        </div>
+        <details><summary>GPX／KML 路線檔怎麼使用？</summary><div class="detail-body"><ol><li>將 GPX 或 KML 存進 iPhone 的「檔案」App。</li><li>點下方 <strong>GPX／KML</strong>，選擇檔案。</li><li>確認路線預覽，設定速度與圈數，再開始移動；也可先儲存成常用路線。</li></ol><p>KML 需包含路線資料（LineString 或 Track）；只有地標的檔案不適用。KMZ 請先解壓取得 KML。</p></div></details>
+        <details><summary>分類與排序在哪裡？</summary><div class="detail-body"><p>收藏與金盆清單頂部可篩選分類，並選<strong>新到舊、舊到新、名稱首字、距離近到遠或原清單順序</strong>。距離排序以目前位置計算，必要時更新目前位置。</p><p>右上 ⋯ 可管理分類與調整順序。金盆可按活動／地點分組；已拉過會排在後面，尚未開始的活動會標示未開始。</p></div></details>
+        <details><summary>批次匯入收藏在哪裡？</summary><div class="detail-body"><p>收藏右上 <strong>⋯ → 批次匯入</strong>，選整理好的 UTF-8 CSV 或支援的 JSON，確認預覽後匯入。Excel 請另存「CSV UTF-8」，不直接匯入 XLSX。</p><p>第一次匯入先用「合併」保留現有清單。更新已有地點請確認匯入模式；選「取代」前先保留完整檔案。</p></div></details>
+      </section>
+
+      <section id="backup" class="section">
+        <div class="section-heading"><span class="step">07</span><div><p class="kicker">需要時再設定</p><h2>共享清單與個人備份</h2></div></div>
+        <article class="sync-block"><h3>查看共享收藏與金盆</h3><ol class="instructions"><li>向維護者取得<strong>同步服務網址與個人存取碼</strong>。</li><li>首頁右上<strong>設定 → Cloudflare 共享同步</strong>，填入網址與存取碼，按<strong>驗證並儲存</strong>。</li><li>成功後，從「收藏 → 共享收藏」或下方「金盆」查看清單。需要最新版本時按「立即檢查更新」。</li></ol><p class="small">共享清單僅由管理者維護。其他使用者可查看與使用，沒有新增、編輯、刪除、匯出或發布共享清單的選項。你勾選的已拉紀錄屬於個人，不會發布給其他人。</p></article>
+        <details><summary>管理者：如何延長接收者的存取碼？</summary><div class="detail-body"><ol><li>到「設定 → Cloudflare 共享同步 → 管理接收者權限」。</li><li>找到接收者，按「延長期限」，選 30、90 或 365 天。</li><li>確認「期限已延長」訊息與新的有效日期。原存取碼不變，對方不用重新輸入。</li></ol><p>未到期的從原到期日延長；已到期的從今天起算。已撤銷的碼不能延長，需另建新碼。這些管理選項只有管理者可見。</p></div></details>
+        <article class="sync-block"><h3>用 Google 備份，換手機能接續</h3><ol class="instructions"><li>首頁<strong>設定 → Google 帳號與個人備份</strong>。</li><li>確認服務網址；新帳號填維護者提供的邀請碼。已設定共享存取碼時，App 可使用同一個碼。</li><li>按<strong>使用 Google 帳號登入</strong>，完成帳號授權。</li><li>原手機已有資料時，按<strong>加入手機原本的資料</strong>，確認合併。</li><li>等待顯示<strong>個人收藏與已拉紀錄已同步</strong>，確認上次同步時間。</li><li>換手機完成安裝、建立新手機的配對檔後，用<strong>同一 Google 帳號</strong>登入讀取已備份資料。</li></ol><div class="note"><strong>未登入也能使用。</strong>資料保存在原手機。Google 備份包含個人收藏、收藏分類順序及已拉紀錄；已存路線目前不包含在這份備份。</div></article>
+      </section>
+
+      <section id="renew" class="section">
+        <div class="section-heading"><span class="step">08</span><div><p class="kicker">兩種方式，自行選擇</p><h2>續期與更新 App</h2></div></div>
+        <p><strong>免費 Apple 帳號的簽署有效期是七天。</strong>續期會重新簽署；更新則是安裝新版 IPA。</p>
+        <div class="comparison-wrap"><table><caption>選擇你的續期方式</caption><thead><tr><th scope="col">方式</th><th scope="col">如何續期</th><th scope="col">適合誰</th></tr></thead><tbody><tr><th scope="row">iloader</th><td>接電腦，重新匯入 IPA 覆蓋安裝</td><td>想少裝一個工具</td></tr><tr><th scope="row">SideStore（選用）</th><td>手機接 Wi-Fi、開 VPN，按重新整理</td><td>想直接在手機續期</td></tr></tbody></table></div>
+        <h3>方式 A：繼續用 iloader</h3><ol class="instructions"><li>到期前用 USB 連接 iPhone，開啟 iloader。</li><li>登入<strong>原本的 Apple 帳號</strong>，選擇這支手機。</li><li>按「Import IPA」，選 RingoFly IPA，保持相同 App 識別覆蓋安裝。</li></ol>
+        <div class="note"><strong>保留資料的關鍵：不要先刪除 App。</strong>更新前先完成個人備份；路線另行保留。若帳號或 App 識別改變，可能會被當成另一個 App。</div>
+
+        <div id="sidestore" class="optional-block"><span class="pill">選用工具</span><h3>方式 B：安裝 SideStore，用手機續期</h3><p>需要第一次用電腦安裝；之後可以在手機重新整理簽署。仍須七天續期，背景續期可能失敗，請每週確認剩餘天數。</p>
+          <h4>一次性的安裝與轉入</h4><ol class="instructions"><li>先備份 RingoFly 的個人資料，保留已安裝的 App。</li><li>用 USB 連接 iPhone，在 iloader 登入<strong>原簽署 Apple 帳號</strong>並選擇這支手機。</li><li>選 <strong>Install SideStore (Stable)</strong>，等待完成。配對檔會由 iloader 自動放入 SideStore。</li><li>依手機提示信任開發者帳號、啟用開發者模式（前面已完成就跳過）。</li><li>連上 Wi-Fi，開啟 LocalDevVPN，確認已連線。</li><li>開啟 SideStore，登入<strong>同一 Apple 帳號</strong>。</li><li>在 <strong>My Apps／我的 App</strong>，先點 SideStore 旁的剩餘天數，完成第一次重新整理。需要重新啟動時稍等，再開啟。</li><li>把 RingoFly IPA 存到 iPhone 的「檔案」，在 SideStore 的 My Apps 點 <strong>＋</strong>，選擇 IPA 安裝。保持原帳號與相同 App 識別，覆蓋現有 RingoFly。</li><li>重新開啟 RingoFly，確認收藏與路線仍在，且 SideStore 的 My Apps 已列出 RingoFly。</li></ol>
+          <h4>每週手機續期</h4><ol class="instructions"><li>連上 Wi-Fi，開啟 LocalDevVPN。</li><li>開啟 SideStore → My Apps，按 <strong>Refresh All／全部重新整理</strong>，或逐一點剩餘天數。</li><li>確認<strong>SideStore 與 RingoFly</strong>都續期成功，剩餘天數重新增加。</li></ol>
+          <div class="note"><strong>是否安裝由你決定。</strong>SideStore 是開源工具，不需越獄，但需要 Apple 帳號與配對資料。只用官方來源、保留雙重認證；不要分享配對檔。免費帳號的三個側載 App 名額包含 SideStore 本身。</div>
+          <p class="source"><a href="https://docs.sidestore.io/docs/installation/install">SideStore 官方安裝指南</a> · <a href="https://docs.sidestore.io/docs/faq">續期、轉入與限制</a> · <a href="https://sidestore.io/">官方網站</a></p>
+        </div>
+        <p class="source">七天有效期：<a href="https://developer.apple.com/support/compare-memberships/">Apple 開發者帳號說明</a>。</p>
+      </section>
+
+      <section id="help" class="section help">
+        <div class="section-heading"><span class="step">?</span><div><p class="kicker">卡在哪裡，找對應項目</p><h2>常見問題</h2></div></div>
+        <details><summary>GitHub 顯示 404，或找不到 IPA？</summary><div class="detail-body"><p>此專案保留私人。先確認已接受專案邀請，並登入受邀的 GitHub 帳號。進入最新版本頁後，在 Assets 找 .ipa；若維護者尚未發布版本或上傳 IPA，請等維護者完成發布。</p></div></details>
+        <details><summary>iloader 找不到 iPhone</summary><div class="detail-body"><p>解鎖 iPhone、確認已信任電腦，拔插 USB，改用可傳資料的線及另一個 USB 埠。Windows 先確認 iTunes 能看見手機；仍無法辨識時，依<a href="https://docs.sidestore.io/docs/installation/prerequisites">官方準備說明</a>改試 Apple Devices。</p></div></details>
+        <details><summary>App 顯示不受信任，或找不到開發者模式</summary><div class="detail-body"><p>先完成 IPA 安裝，再到「設定 → 一般 → VPN 與裝置管理」信任自己的開發者帳號。之後查看「隱私權與安全性 → 開發者模式」，依提示重啟並確認啟用。</p></div></details>
+        <details><summary>匯入配對檔失敗</summary><div class="detail-body"><p>用最新版 iloader、USB 連接並解鎖同一支 iPhone，重新匯出配對檔後匯入。請選完整的 PLIST 檔，不要改內容或使用其他手機的檔案。系統更新、重置或檔案失效後，可能需重新配對。</p></div></details>
+        <details><summary>三項準備一直無法完成</summary><div class="detail-body"><p>確認 Wi-Fi 有網路、LocalDevVPN 已連線。第一次 DDI 下載需要時間，保持 App 開啟；若顯示失敗，再按「重試連線」。其他 VPN 可能干擾，先中斷再用 LocalDevVPN。</p></div></details>
+        <details><summary>按恢復後，地圖還停在模擬位置</summary><div class="detail-body"><p>先等清除指令完成，再到 Apple 地圖按目前位置確認。收到新的真實定位可能需要等待；若 RingoFly 顯示尚未確認恢復，保持 VPN 連線並依提示重試。畫面停止不等於 GPS 已恢復。</p></div></details>
+        <details><summary>七天後 App 打不開，怎麼辦？</summary><div class="detail-body"><p>先保留 App，使用原帳號與相同 App 識別重新簽署覆蓋安裝。若 SideStore 本身也過期，接回電腦，用 iloader 覆蓋安裝 SideStore，再完成重新整理與 RingoFly 續期。</p></div></details>
+        <details><summary>SideStore 會不會自動幫我續期？</summary><div class="detail-body"><p>有背景重新整理機制，但會受網路、VPN 與 iOS 背景排程影響。每週主動打開 My Apps，看 SideStore 與 RingoFly 的剩餘天數，才知道有沒有續期成功。</p></div></details>
+        <details><summary>SideStore 安全嗎？</summary><div class="detail-body"><p>官方提供公開原始碼，不需越獄。開源不等於零風險；它需要處理 Apple 登入與簽署資料。只從官方下載，保留雙重認證，不分享配對檔。官方 FAQ 亦說明舊版 Anisette 登入驗證服務可能造成帳號鎖定；遇到問題依官方指引處理。</p><a href="https://docs.sidestore.io/docs/faq">查看 SideStore 官方 FAQ</a></div></details>
+        <details><summary>Google 登入成功，但原收藏怎麼不見了？</summary><div class="detail-body"><p>登入後會切到帳號的私人資料。到「Google 帳號與個人備份」按「加入手機原本的資料」合併，再等同步成功。未登入時的原資料仍保留在手機，登出可以回到那份資料。</p></div></details>
+        <details><summary>換手機後，為什麼沒有舊資料？</summary><div class="detail-body"><p>原手機須先登入 Google、加入手機原本的資料，並完成雲端同步。新手機使用同一 Google 帳號；配對檔需要為新手機另外建立。已存路線目前不包含在 Google 個人備份。</p></div></details>
+      </section>
+      <footer><strong>RingoFly</strong><p>指南適用 build 47 · 更新於 2026 / 10 / 09</p><p>工具介面可能隨版本調整；下載連結均指向官方來源。</p><a href="#top">回到頁首</a></footer>
+    </main>
+  </div>
+</body>
+</html>
