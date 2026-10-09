@@ -7,3 +7,5 @@
 IPA 下載：[私人專案的最新版本](https://github.com/dearguo/pikmin-fly/releases/latest)，受邀 GitHub 帳號登入後才能下載。
 
 網站以 GitHub Pages 的 main 分支根目錄發布。原始頁面為 index.html，styles.css、guide.js、app-icon.png 是頁面資源。
+
+`version.json` 提供公開版本編號與使用者更新日誌，供 App 設定頁讀取；IPA 仍在私人專案，必須受邀登入才能下載。

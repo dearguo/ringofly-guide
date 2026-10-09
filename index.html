@@ -76,7 +76,7 @@
       <section id="install" class="section">
         <div class="section-heading"><span class="step">03</span><div><p class="kicker">電腦安裝 · 手機確認</p><h2>把 RingoFly 裝進手機</h2></div></div>
         <ol class="instructions"><li>用 USB 連接 iPhone 與電腦，解鎖手機。出現「信任這部電腦」時按<strong>信任</strong>，並輸入解鎖密碼。</li><li>在電腦開啟 iloader，登入自己的 <strong>Apple 帳號</strong>，依提示輸入驗證碼。</li><li>在裝置清單選擇<strong>這支 iPhone</strong>。</li><li>點下方「前往 GitHub 最新版本」，用受邀的 GitHub 帳號登入。在版本頁的 <strong>Assets／資產</strong> 找到 <strong>.ipa</strong> 安裝檔並下載；回到 iloader 按 <strong>Import IPA／匯入 IPA</strong>，選擇檔案並等待安裝完成。</li><li>在 iPhone 前往<strong>設定 → 一般 → VPN 與裝置管理</strong>，點自己的開發者帳號，依畫面完成「信任」或「允許並重新啟動」。</li><li>前往<strong>設定 → 隱私權與安全性 → 開發者模式</strong>，開啟後依提示重新啟動，解鎖並確認啟用。</li><li>回到主畫面，開啟 <strong>RingoFly</strong>。</li></ol>
-        <div class="download-box"><div><strong>RingoFly 最新版本</strong><span>GitHub Releases · IPA 未簽署</span></div><a class="button primary" href="https://github.com/dearguo/pikmin-fly/releases/latest" target="_blank" rel="noopener noreferrer">前往 GitHub 最新版本</a></div><p class="small">私人專案：請先接受維護者的 GitHub 邀請，再用受邀帳號登入。下載 Assets 內的 .ipa；「Source code」是原始碼，不是手機安裝檔。</p>
+        <div class="download-box"><div><strong>RingoFly 最新版本</strong><span>GitHub Releases · IPA 未簽署</span></div><a class="button primary" href="https://github.com/dearguo/pikmin-fly/releases/latest" target="_blank" rel="noopener noreferrer">前往 GitHub 最新版本</a></div><p class="small">私人專案：請先<a href="https://github.com/signup" target="_blank" rel="noopener noreferrer">註冊 GitHub 帳號</a>，將<strong>帳號名稱提供給 Ringo</strong>；收到並接受邀請後，登入下載。下載 Assets 內的 .ipa；「Source code」是原始碼，不是手機安裝檔。</p>
         <div class="note"><strong>IPA 需要用 iloader 安裝。</strong>直接點檔案不會安裝。已經裝過 RingoFly 的使用者，請用原 Apple 帳號覆蓋安裝，保留相同 App 識別，不要先刪除。</div>
         <p class="source"><a href="https://github.com/nab138/iloader" target="_blank" rel="noopener noreferrer">iloader 官方安裝工具</a> · <a href="https://docs.sidestore.io/docs/installation/install" target="_blank" rel="noopener noreferrer">手機信任與開發者模式操作參考</a></p>
         <details><summary>想以後直接在手機續期？可選装 SideStore</summary><div class="detail-body"><p>SideStore 不是必要工具。它讓你用手機重新簽署 RingoFly；免費 Apple 帳號仍是七天有效期。完整安裝方式在下方<a href="#sidestore">「SideStore 手機續期」</a>。</p></div></details>
@@ -124,6 +124,7 @@
         <div class="section-heading"><span class="step">08</span><div><p class="kicker">兩種方式，自行選擇</p><h2>續期與更新 App</h2></div></div>
         <p><strong>免費 Apple 帳號的簽署有效期是七天。</strong>續期會重新簽署；更新則是安裝新版 IPA。</p>
         <div class="comparison-wrap"><table><caption>選擇你的續期方式</caption><thead><tr><th scope="col">方式</th><th scope="col">如何續期</th><th scope="col">適合誰</th></tr></thead><tbody><tr><th scope="row">iloader</th><td>接電腦，重新匯入 IPA 覆蓋安裝</td><td>想少裝一個工具</td></tr><tr><th scope="row">SideStore（選用）</th><td>手機接 Wi-Fi、開 VPN，按重新整理</td><td>想直接在手機續期</td></tr></tbody></table></div>
+        <h3>查看新版與更新日誌</h3><p>RingoFly <strong>設定 → 版本與更新</strong>可查看目前安裝版本與線上最新版本，按<strong>更新日誌</strong>查看功能與修正。有新版時按「前往 GitHub 最新版本」，下載 IPA 後覆蓋安裝。</p>
         <h3>方式 A：繼續用 iloader</h3><ol class="instructions"><li>到期前用 USB 連接 iPhone，開啟 iloader。</li><li>登入<strong>原本的 Apple 帳號</strong>，選擇這支手機。</li><li>按「Import IPA」，選 RingoFly IPA，保持相同 App 識別覆蓋安裝。</li></ol>
         <div class="note"><strong>保留資料的關鍵：不要先刪除 App。</strong>更新前先完成個人備份；路線另行保留。若帳號或 App 識別改變，可能會被當成另一個 App。</div>
 
@@ -138,7 +139,7 @@
 
       <section id="help" class="section help">
         <div class="section-heading"><span class="step">?</span><div><p class="kicker">卡在哪裡，找對應項目</p><h2>常見問題</h2></div></div>
-        <details><summary>GitHub 顯示 404，或找不到 IPA？</summary><div class="detail-body"><p>此專案保留私人。先確認已接受專案邀請，並登入受邀的 GitHub 帳號。進入最新版本頁後，在 Assets 找 .ipa；若維護者尚未發布版本或上傳 IPA，請等維護者完成發布。</p></div></details>
+        <details><summary>GitHub 顯示 404，或找不到 IPA？</summary><div class="detail-body"><p>此專案保留私人。請先註冊 GitHub 帳號，將帳號名稱提供給 Ringo，收到並接受專案邀請後，登入受邀帳號。進入最新版本頁後，在 Assets 找 .ipa；若維護者尚未發布版本或上傳 IPA，請等維護者完成發布。</p></div></details>
         <details><summary>iloader 找不到 iPhone</summary><div class="detail-body"><p>解鎖 iPhone、確認已信任電腦，拔插 USB，改用可傳資料的線及另一個 USB 埠。Windows 先確認 iTunes 能看見手機；仍無法辨識時，依<a href="https://docs.sidestore.io/docs/installation/prerequisites" target="_blank" rel="noopener noreferrer">官方準備說明</a>改試 Apple Devices。</p></div></details>
         <details><summary>App 顯示不受信任，或找不到開發者模式</summary><div class="detail-body"><p>先完成 IPA 安裝，再到「設定 → 一般 → VPN 與裝置管理」信任自己的開發者帳號。之後查看「隱私權與安全性 → 開發者模式」，依提示重啟並確認啟用。</p></div></details>
         <details><summary>匯入配對檔失敗</summary><div class="detail-body"><p>用最新版 iloader、USB 連接並解鎖同一支 iPhone，重新匯出配對檔後匯入。請選完整的 PLIST 檔，不要改內容或使用其他手機的檔案。系統更新、重置或檔案失效後，可能需重新配對。</p></div></details>
@@ -150,7 +151,13 @@
         <details><summary>Google 登入成功，但原收藏怎麼不見了？</summary><div class="detail-body"><p>登入後會切到帳號的私人資料。到「Google 帳號與個人備份」按「加入手機原本的資料」合併，再等同步成功。未登入時的原資料仍保留在手機，登出可以回到那份資料。</p></div></details>
         <details><summary>換手機後，為什麼沒有舊資料？</summary><div class="detail-body"><p>原手機須先登入 Google、加入手機原本的資料，並完成雲端同步。新手機使用同一 Google 帳號；配對檔需要為新手機另外建立。已存路線目前不包含在 Google 個人備份。</p></div></details>
       </section>
-      <footer><strong>RingoFly</strong><p>指南適用 build 47 · 更新於 2026 / 10 / 09</p><p>工具介面可能隨版本調整；下載連結均指向官方來源。</p><a href="#top">回到頁首</a></footer>
+      <footer><div class="disclaimer" aria-label="使用提醒">
+        <h3>使用提醒</h3>
+        <p><strong>關於本工具</strong><br>RingoFly 是個人開發的非營利、非官方作品，與任天堂（Nintendo）、Niantic, Inc.（現 Scopely Explore）及《Pikmin》系列官方沒有合作、授權、贊助或隸屬關係。相關遊戲名稱、品牌與商標屬原權利人所有。</p>
+        <p><strong>定位與帳號</strong><br>模擬定位可能不符合遊戲的服務條款，系統或遊戲也可能辨識模擬或異常定位。帳號可能受到警告、暫停使用或停權；請先了解遊戲規則，再自行評估是否使用。相關風險與帳號損失由使用者承擔，開發者無法承擔相關損失。</p>
+        <p><strong>使用範圍</strong><br>本工具僅供個人學習、測試與學術研究，請勿用於違法、商業或營利行為，包括販售本程式及代客操作。請在閱讀、理解並同意本說明後再開始使用。</p>
+        <p class="source"><a href="https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/2868-three-strike-discipline-policy/" target="_blank" rel="noopener noreferrer">遊戲官方公平使用政策</a> · <a href="https://developer.apple.com/documentation/corelocation/cllocationsourceinformation/issimulatedbysoftware" target="_blank" rel="noopener noreferrer">Apple 定位來源說明</a></p>
+        </div><strong>RingoFly</strong><p>指南適用 build 48 · 更新於 2026 / 10 / 09</p><p>工具介面可能隨版本調整；下載連結均指向官方來源。</p><a href="#top">回到頁首</a></footer>
     </main>
   </div>
 </body>
