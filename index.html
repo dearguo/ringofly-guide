@@ -2,6 +2,8 @@
 <html lang="zh-Hant-TW">
 <head>
   <meta charset="utf-8">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="從 iloader、LocalDevVPN 到 RingoFly：iPhone 安裝、配對、首次定位、收藏與路線使用，以及選用 SideStore 手機續期。">
   <meta name="theme-color" content="#152b4e">
@@ -116,8 +118,9 @@
       <section id="backup" class="section">
         <div class="section-heading"><span class="step">07</span><div><p class="kicker">需要時再設定</p><h2>共享清單與個人備份</h2></div></div>
         <article class="sync-block"><h3>查看共享收藏與金盆</h3><ol class="instructions"><li>向維護者取得<strong>同步服務網址與個人存取碼</strong>。</li><li>首頁右上<strong>設定 → Cloudflare 共享同步</strong>，填入網址與存取碼，按<strong>驗證並儲存</strong>。</li><li>成功後，從「收藏 → 共享收藏」或下方「金盆」查看清單。需要最新版本時按「立即檢查更新」。</li></ol><p class="small">共享清單僅由管理者維護。其他使用者可查看與使用，沒有新增、編輯、刪除、匯出或發布共享清單的選項。你勾選的已拉紀錄屬於個人，不會發布給其他人。</p></article>
-        <details><summary>管理者：如何延長接收者的存取碼？</summary><div class="detail-body"><ol><li>到「設定 → Cloudflare 共享同步 → 管理接收者權限」。</li><li>找到接收者，按「延長期限」，選 30、90 或 365 天。</li><li>確認「期限已延長」訊息與新的有效日期。原存取碼不變，對方不用重新輸入。</li></ol><p>未到期的從原到期日延長；已到期的從今天起算。已撤銷的碼不能延長，需另建新碼。這些管理選項只有管理者可見。</p></div></details>
+        <details><summary>管理者：如何延長接收者的存取碼？</summary><div class="detail-body"><ol><li>到「設定 → Cloudflare 共享同步 → 管理接收者權限」。</li><li>找到接收者，按「延長期限」，選 30、90 或 365 天。</li><li>確認「期限已延長」訊息與新的有效日期。原存取碼不變，對方不用重新輸入。</li></ol><p>未到期的從原到期日延長；已到期的從今天起算。已撤銷的碼不能延長，需另建新碼。接收者右側 ⋯ 可編輯名稱；展開「已撤銷」可刪除紀錄，不影響個人備份。這些管理選項只有管理者可見。</p></div></details>
         <article class="sync-block"><h3>用 Google 備份，換手機能接續</h3><ol class="instructions"><li>首頁<strong>設定 → Google 帳號與個人備份</strong>。</li><li>確認服務網址；新帳號填維護者提供的邀請碼。已設定共享存取碼時，App 可使用同一個碼。</li><li>按<strong>使用 Google 帳號登入</strong>，完成帳號授權。</li><li>原手機已有資料時，按<strong>加入手機原本的資料</strong>，確認合併。</li><li>等待顯示<strong>個人收藏與已拉紀錄已同步</strong>，確認上次同步時間。</li><li>換手機完成安裝、建立新手機的配對檔後，用<strong>同一 Google 帳號</strong>登入讀取已備份資料。</li></ol><div class="note"><strong>未登入也能使用。</strong>資料保存在原手機。Google 備份包含個人收藏、收藏分類順序及已拉紀錄；已存路線目前不包含在這份備份。</div></article>
+        <details><summary>帳號、配對檔與備份怎麼保護？</summary><div class="detail-body"><p>Apple 密碼與驗證碼只在官方安裝工具輸入，不需提供給 Ringo。配對檔只交給自己的手機使用；匯入後，請將「檔案」App 或電腦裡不需要的副本移除。</p><p>同步網址與個人存取碼請向 Ringo 取得，勿改用陌生人提供的網址；存取碼只分享給本人。撤銷會停止後續共享同步，已下載的離線清單與既有 Google 個人備份仍可能保留。</p><p>Google 用於確認身分，雲端保存帳號識別、電子郵件、收藏名稱與座標、分類及已拉時間；不會備份 Apple 密碼、配對檔或持續的即時定位。資料依帳號分隔，服務維護者仍具資料庫管理權限；建議不要把私密地點存入雲端備份。</p></div></details>
       </section>
 
       <section id="renew" class="section">
@@ -157,7 +160,7 @@
         <p><strong>定位與帳號</strong><br>模擬定位可能不符合遊戲的服務條款，系統或遊戲也可能辨識模擬或異常定位。帳號可能受到警告、暫停使用或停權；請先了解遊戲規則，再自行評估是否使用。相關風險與帳號損失由使用者承擔，開發者無法承擔相關損失。</p>
         <p><strong>使用範圍</strong><br>本工具僅供個人學習、測試與學術研究，請勿用於違法、商業或營利行為，包括販售本程式及代客操作。請在閱讀、理解並同意本說明後再開始使用。</p>
         <p class="source"><a href="https://niantic.helpshift.com/hc/en/23-pikmin-bloom/faq/2868-three-strike-discipline-policy/" target="_blank" rel="noopener noreferrer">遊戲官方公平使用政策</a> · <a href="https://developer.apple.com/documentation/corelocation/cllocationsourceinformation/issimulatedbysoftware" target="_blank" rel="noopener noreferrer">Apple 定位來源說明</a></p>
-        </div><strong>RingoFly</strong><p>指南適用 build 48 · 更新於 2026 / 10 / 09</p><p>工具介面可能隨版本調整；下載連結均指向官方來源。</p><a href="#top">回到頁首</a></footer>
+        </div><strong>RingoFly</strong><p>指南適用 build 49 · 更新於 2026 / 10 / 09</p><p>工具介面可能隨版本調整；下載連結均指向官方來源。</p><a href="#top">回到頁首</a></footer>
     </main>
   </div>
 </body>
