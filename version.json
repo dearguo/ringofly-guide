@@ -4,6 +4,14 @@
   "releases": [
     {
       "version": "1.0.0",
+      "build": 87,
+      "date": "2026-10-20",
+      "changes": [
+        "App 圖示換成捧著藍莓的紫皮克敏。"
+      ]
+    },
+    {
+      "version": "1.0.0",
       "build": 86,
       "date": "2026-10-19",
       "changes": [
